@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projet-angular-poudlard-app": {
+      "hosting": {
+        "projet_angular_poudlard_app": [
+          "projet-angular-poudlard-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projet-angular-poudlard-app"
+  }
+}

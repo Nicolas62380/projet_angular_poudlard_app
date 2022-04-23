@@ -1,0 +1,29 @@
+<p>sorcier-details works!</p>
+
+{{ sorcier$ | async | json }}
+
+<mat-card class="example-card" *ngIf="sorcier$ | async; let sorcier">
+  <mat-card-header>
+    <mat-card-title
+      >{{ sorcier.firstName | titlecase }}
+      {{ sorcier.lastName | uppercase }}</mat-card-title
+    >
+  </mat-card-header>
+
+  <mat-card-content>
+    <ul>
+      <li><b>Class :</b> {{ sorcier.class }}</li>
+      <li><b>Date of birth :</b> {{ sorcier.dateOfBirth }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="deleteSorcier(sorcier.id)">
+      Delete
+    </button>
+    <button mat-raised-button color="primary" (click)="updateSorcier(sorcier)">
+      Update
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<button mat-raised-button color="warn" (click)="goBack()">Go Back</button>
