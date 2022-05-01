@@ -4,7 +4,7 @@
 
 //En Local
 export const environment = {
-  production: false,
+  production: true,
   apiBaseUrl:"http://localhost:3000"
 };
 
